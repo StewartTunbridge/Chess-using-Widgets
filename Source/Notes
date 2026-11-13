@@ -1,4 +1,0 @@
-Built with Code Blocks on all targets
-  Windows requires MinGW, freetype
-Requires the Widgets unit
-Requires the Chess-for-Console unit (just for the Chess engine (Chess.c) which is common
