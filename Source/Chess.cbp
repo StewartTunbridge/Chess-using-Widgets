@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Chess" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Chess" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="X11" />
+					<Add library="Xext" />
+					<Add library="xkbcommon" />
+					<Add library="asound" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Chess" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="X11" />
+					<Add library="Xext" />
+					<Add library="xkbcommon" />
+					<Add library="asound" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseWin">
+				<Option output="bin/Release/Chess" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-D_Windows" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static" />
+					<Add library="C:/Windows/System32/ws2_32.dll" />
+					<Add library="C:/Windows/System32/gdi32.dll" />
+					<Add library='&quot;C:/Windows/System32/winmm.dll&quot;' />
+				</Linker>
+			</Target>
+			<Target title="ReleaseSDL">
+				<Option output="bin/ReleaseSDL/Chess" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/ReleaseSDL/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="SDL2" />
+				</Linker>
+			</Target>
+			<Target title="DebugSDL">
+				<Option output="bin/DebugSDL/Chess" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/DebugSDL/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="SDL2" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../Widgets/ColourSelect.cpp" />
+		<Unit filename="../Widgets/FileSelect.cpp" />
+		<Unit filename="../Widgets/MessageBox.cpp" />
+		<Unit filename="../Widgets/MessageResponseBox.cpp" />
+		<Unit filename="../Widgets/Widgets.cpp" />
+		<Unit filename="../Widgets/WidgetsDriverSDL.cpp">
+			<Option target="ReleaseSDL" />
+			<Option target="DebugSDL" />
+		</Unit>
+		<Unit filename="../Widgets/WidgetsDriverWin.cpp">
+			<Option target="ReleaseWin" />
+		</Unit>
+		<Unit filename="../Widgets/WidgetsDriverX.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="../Widgets/WidgetsEdit.cpp" />
+		<Unit filename="../Widgets/WidgetsGrid.cpp" />
+		<Unit filename="../Widgets/WidgetsImageBMP.cpp" />
+		<Unit filename="../Widgets/WidgetsTextSTB.cpp" />
+		<Unit filename="../Widgets/lib.cpp" />
+		<Unit filename="Chess.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
